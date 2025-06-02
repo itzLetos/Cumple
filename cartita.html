@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Mi Amor</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .boton-abrir {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .boton-abrir:hover {
+      transform: scale(1.05);
+    }
+
+    .carta {
+      display: none;
+      max-width: 700px;
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      border: 2px solid #ff99cc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: aparecer 1s ease forwards;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 30px;
+      color: #d63384;
+      margin-bottom: 20px;
+      animation: glow 2s infinite;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #ff66cc; }
+      50% { text-shadow: 0 0 15px #ff66cc; }
+      100% { text-shadow: 0 0 5px #ff66cc; }
+    }
+
+    .mensaje {
+      font-size: 18px;
+      color: #4d194d;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .firma {
+      margin-top: 30px;
+      text-align: right;
+      font-style: italic;
+      color: #6a1b9a;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="boton-abrir" onclick="mostrarCarta()">💌 Abrir carta</button>
+
+  <div class="carta" id="carta">
+    <div class="titulo">🎂 Feliz Cumpleaños, Mi Amor 💖</div>
+    <div class="mensaje">
+      Mi Cami bella.<br>
+      No hay palabras suficientes para decirte cuánto te amo y cuánto significas para mí. 🌻🌹<br>
+      Eres mi alegría, mi paz. Cada día contigo es un regalo y no podría estar más agradecido por tenerte en mi vida, algo que nadia más pudo lograr antes y quiero que siempre me permitas estar a tu lado para compartir mi vida y todo contigo. Te amo mucho😘<br>
+      Gracias por estar a mi lado, por aceptarme en tu vida, por hacerme feliz y por hacer que cada uno de mis días sean maravillosos si podemos pasarlos juntos, eres muy importante para mi y no podria querer ni desear nada más porque te tengo a ti, mi complemento perfecto, la mujer perfecta para mi🥰.<br><br>
+    </div>
+
+    <div class="firma">
+      Siempre tuyo,<br>
+      Tu gatito, tu Leo❤️
+    </div>
+  </div>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById('carta').style.display = 'block';
+      document.querySelector('.boton-abrir').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
